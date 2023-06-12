@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  height: 95vh;
+  background-image:url('../IMG/Tulips.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #3b409b;
+}
+.main-container {
+  background-color: rgba(255,255,255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 32px  rgba(31, 38, 135, 0.37);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  height: 400px;
+  width: 800px;
+  align-items: center;
+}
+
+#welcome {
+  font-size: 3rem;
+  font-style: italic;
+  text-align: center;
+  margin-top: 50px;
+  text-shadow: 0 5px #72a2ca;
+  color: #3b409b;
+  font-family: Segoe Script;
+}
+
+.main-title {
+  font-size: 3rem;
+  font-style: italic;
+  text-align: center;
+  margin-top: 50px;
+  text-shadow: 0 5px yellow;
+  color: purple;
+  font-family: Segoe Script;
+}
+
+#welcome span {
+  display: inline-block;
+  transform: translateY(200%);
+  opacity: 0;
+  animation: slideIn 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards,
+             fadeIn 1s ease-in-out 0.8s forwards;
+}
+
+@keyframes slideIn {
+  0% { transform: translateY(200%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.main-container  p {
+  background-color: #3b409b;
+  box-shadow: 0 0 5px #fff;
+  border-radius: 5px;
+  height: 40px;
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 1px #fff ,0 0 1px #fff ;
+}
+
+.main-container  p span{
+  display: inline-block;
+  transform: translateY(200%);
+  opacity: 0;
+  animation: slideIn 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards,
+             fadeIn 1s ease-in-out 0.8s forwards;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-block;
+  color: #fff;
+  box-shadow: 0 0 5px black;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: .9rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+  background-color: #72a2ca;
+}
+
+.button:hover {
+  backdrop-filter: none;
+  background-color: #4CAF50;
+  transform: scale(1.1);
+}
+
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  animation: fadein 0.5s;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #72a2ca;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 20px #fff;
+  width: 300px;
+  max-width: 500px;
+  transition: opacity 0.5s;
+  animation: fadein 0.2s;
+}
+
+.modal-content label,
+.modal-content h2{
+  color: #fff;
+}
+
+.log{
+  height: 320px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.close {
+  color: #fff;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: color 0.1s;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(255, 230, 0);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Additional styles for the show password checkbox */
+.password-container {
+  position: relative;
+}
+
+.show-password {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.show-password-icon {
+  height: 25px;
+  width: 25px;
+  background-image: url("../IMG/view.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 33%;
+  right: 15%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: all .1s ease-in-out;
+}
+
+.show-password-icon.change{
+  background-image: url("../IMG/hide.png");
+}
+
+
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+}
+
+input[type=text], input[type=password] {
+  padding: 10px;
+  padding-right: 3rem;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+button[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type=submit]:hover {
+  background-color: #3e8e41;
+}

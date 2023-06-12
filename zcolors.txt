@@ -1,0 +1,46 @@
+text = #fafafa
+background  = #0b0a0a
+primary button = #655e5d
+secondary btn = #000
+accent = #302e2c
+
+
+
+
+
+
+
+
+
+
+
+
+// ---------------- WORLD BTN --------------------\\
+    // blankMsgAlert.classList.remove('alert')
+
+    // const msgCont = document.createElement('div');
+    // msgCont.classList.add('sender-cont');
+    // const msg = document.createElement('span');
+    // msg.classList.add('sender');
+    // msg.textContent = worldMsgInput.textContent;
+    // msgCont.appendChild(msg);
+    // worldMsgBox.appendChild(msgCont);
+    // worldMsgBox.insertBefore(msgCont, worldMsgBox.firstChild);
+    
+
+  // username
+      // const usersData = document.createElement('a');
+      // usersData.href = '#';
+      // usersData.textContent = username;
+      // usersData.classList.add('users-link');
+      // 
+      // userObject.username = username;
+
+      // const showU = (e) => {
+      //   e.preventDefault();
+      //   chatBoxLabel.textContent = username;
+      //   worldChatBox.classList.add('hideWorldChat');
+      //   userChatBox.classList.add('showUserChat');
+      // };
+
+      // usersData.addEventListener('click', showU);
